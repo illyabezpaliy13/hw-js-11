@@ -1,26 +1,25 @@
-let input;
-const numbers = [];
-let total = 0;
+const numbersAdd = function () {
+  const numbers = [];
+  let total = 0;
+  let input = Number(prompt("Введіть число"));
 
-while (input) {
-  if (!isNaN(input)) {
-    numbers.push(input);
-    input = Number(prompt('Введіть число ще раз'))
-  } else if (!isNaN(input)) {
-    break;
-  } else if (input === null) {
-    break;
-  }
-}
+  while (input) {
+    if (!isNaN(input)) {
+      numbers.push(input);
+      input = Number(prompt("Введіть число"));
+    } else if (isNaN(input)) {
+      break;
+    } else if (input === null) {
+      break;
+    };
+  };
 
-console.log(numbers)
+  for (let i = 0; i < numbers.length; i++) {
+    total += numbers[i];
+  };
+  console.log(numbers);
+  console.log(total);
+  return total;
+};
 
-const addNumbers = function ( ) {
-    for (let i = 0; i < numbers.length; i++) {
-        total += numbers[i]
-        console.log(total)
-    }
-    return total
-}
-
-console.log(total);
+numbersAdd();
