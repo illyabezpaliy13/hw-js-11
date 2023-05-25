@@ -12,9 +12,10 @@ while (input) {
     break;
   }
 }
+
 console.log(numbers)
 
-const addNumbers = function () {
+const addNumbers = function ( ) {
     for (let i = 0; i < numbers.length; i++) {
         total += numbers[i]
         console.log(total)
